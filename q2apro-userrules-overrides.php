@@ -41,7 +41,7 @@
 		}
 
 		// questions cannot be reopened, only admin
-		$rules['reopenable'] = ($level>=QA_USER_LEVEL_ADMIN); 
+		$rules['reopenable'] = $rules['reopenable'] && $level>=QA_USER_LEVEL_ADMIN;
 		
 		// Moderator
 		if ($level==QA_USER_LEVEL_EXPERT) 
@@ -70,7 +70,6 @@
 		if ($level>=QA_USER_LEVEL_ADMIN) 
 		{
 			$rules['editable'] = $rules['editbutton'] = $rules['hideable'] = true;
-			$rules['reopenable'] = true; 
 		}
 		
 		// experts, moderators, admins can close questions
