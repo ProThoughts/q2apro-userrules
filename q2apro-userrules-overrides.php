@@ -13,7 +13,7 @@
 	function qa_page_q_post_rules($post, $parentpost=null, $siblingposts=null, $childposts=null)
 	{
 		// default function call
-		$rules = qa_page_q_post_rules_base($post, $parentpost=null, $siblingposts=null, $childposts=null);
+		$rules = qa_page_q_post_rules_base($post, $parentpost, $siblingposts, $childposts);
 
 
 		$userid = qa_get_logged_in_userid();
